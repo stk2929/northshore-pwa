@@ -49,7 +49,7 @@ const DATA_CONFIG={
   REFRESH_INTERVAL:30*60*1000,
 };
 
-const TOWNS=["All Towns","Highland Park","Evanston","Wilmette","Winnetka","Glencoe","Kenilworth","Northbrook","Glenview","Deerfield","Skokie","Lake Forest","Libertyville","Highwood","Northfield","Lake Bluff"];
+const TOWNS=["All Towns","Highland Park","Evanston","Wilmette","Winnetka","Glencoe","Kenilworth","Northbrook","Glenview","Deerfield","Skokie","Lake Forest","Libertyville","Highwood","Northfield","Lake Bluff","Lincolnshire","Bannockburn"];
 const AGE_GROUPS=["All Ages","0-2","3-5","6-8","9-12","Teens","Family"];
 const CATEGORIES=[
   {id:"all",label:"All",icon:"✿"},{id:"outdoors",label:"Outdoors",icon:"🌿"},
@@ -104,12 +104,15 @@ const BASE_RECURRING={
   ],
   Tue:[
     {id:601,title:"Wiggle Time — Open Play",loc:"Recreation Center of Highland Park",addr:"1207 Park Ave W",town:"Highland Park",time:"10:30 AM",end:"12:30 PM",cat:"sports",age:"0-2",src:"parkDistrict",desc:"Drop-in open play with soft mats, tunnels, ride-on toys for ages 0–5.",free:false,cost:"$8–$10",indoor:true,tags:["Drop-in"],url:"https://www.pdhp.org"},
+    {id:606,title:"Charlie and the Chocolate Factory",loc:"Marriott Theatre",addr:"10 Marriott Dr",town:"Lincolnshire",time:"10:00 AM",end:"11:10 AM",cat:"theater",age:"Family",src:"theater",desc:"Theatre for Young Audiences presents Roald Dahl's classic! 70-min musical in-the-round. Under 2 free on lap. Through Mar 28. Call (847) 634-0200 to confirm.",free:false,cost:"From $20",indoor:true,tags:["Through Mar 28","70 min"],url:"https://www.marriotttheatre.com/show/charlie-and-the-chocolate-factory",featured:true},
+    {id:607,title:"Taste Buds Kitchen — Kids Class",loc:"Taste Buds Kitchen",addr:"2521 Waukegan Rd",town:"Bannockburn",time:"4:00 PM",end:"5:30 PM",cat:"cooking",age:"6-8",src:"localBiz",desc:"Hands-on cooking class in a nut-free kitchen! Kids cook a full recipe from scratch. Drop-off ages 4+. Different menu each week.",free:false,cost:"$65/child",indoor:true,tags:["Nut-free","Drop-off"],url:"https://tastebudskitchen.com/bannockburn/"},
     {id:602,title:"Toddler Story Time",loc:"Highland Park Public Library",addr:"494 Laurel Ave",town:"Highland Park",time:"10:00 AM",end:"10:45 AM",cat:"reading",age:"0-2",src:"library",desc:"Stories, songs and fingerplays. Craft and free play included.",free:true,indoor:true,tags:["Drop-in","No registration"],url:"https://www.hplibrary.org"},
     {id:603,title:"Music with Nicole",loc:"Little Beans Cafe",addr:"430 Asbury Ave, Evanston",town:"Evanston",time:"11:00 AM",end:"11:45 AM",cat:"music",age:"0-2",src:"localBiz",desc:"Jamberry Music's live guitar, drums and shakers in a cozy cafe.",free:false,cost:"$18/class",indoor:true,tags:["Live music","Cafe"],url:"https://www.jamberrymusic.com"},
     {id:604,title:"Giggles Play — Open Play",loc:"Giggles Playspace",addr:"330 Waukegan Ave, Highwood",town:"Highwood",time:"9:30 AM",end:"11:30 AM",cat:"social",age:"0-2",src:"playspace",desc:"Sensory bins, reading nook. Coffee for parents!",free:false,cost:"$15/child",indoor:true,tags:["Ages 0–5"],url:"https://www.gigglesplay.com"},
     {id:605,title:"Orchid Show",loc:"Chicago Botanic Garden",addr:"1000 Lake Cook Rd, Glencoe",town:"Glencoe",time:"10:00 AM",end:"4:00 PM",cat:"nature",age:"Family",src:"museum",desc:"10,000 vibrant orchids! Guided tours at 11 AM and 2 PM. Through March 22.",free:false,cost:"$15 / $10 child",indoor:true,tags:["Through Mar 22"],featured:true,url:"https://www.chicagobotanic.org/orchid"},
   ],
   Wed:[
+    {id:30,title:"Charlie and the Chocolate Factory",loc:"Marriott Theatre",addr:"10 Marriott Dr",town:"Lincolnshire",time:"10:00 AM",end:"11:10 AM",cat:"theater",age:"Family",src:"theater",desc:"Theatre for Young Audiences presents Roald Dahl's classic! 70-min musical in-the-round. Through Mar 28.",free:false,cost:"From $20",indoor:true,tags:["Through Mar 28","70 min"],url:"https://www.marriotttheatre.com/show/charlie-and-the-chocolate-factory",featured:true},
     {id:10,title:"Storytime at The Book Stall",loc:"The Book Stall",addr:"811 Elm St, Winnetka",town:"Winnetka",time:"10:30 AM",end:"11:15 AM",cat:"reading",age:"3-5",src:"localBiz",desc:"The Book Stall's beloved weekly children's storytime! A staff favorite reads a new picture book, followed by a craft. 68,000+ titles, est. 1940.",free:true,indoor:true,tags:["Drop-in","Weekly","Free craft"],contact:"847-446-8880",url:"https://www.thebookstall.com",featured:true},
     {id:11,title:"Wednesdays with Mr. Dave",loc:"Little Elm",addr:"847 Elm St, Winnetka",town:"Winnetka",time:"10:00 AM",end:"10:45 AM",cat:"music",age:"0-2",src:"localBiz",desc:"Bi-weekly music with Mr. Dave at this women-owned boutique. Browse Konges Slojd, Petite Plume while kids dance!",spots:15,free:true,indoor:true,tags:["Bi-weekly","Free","Ages 0–4"],featured:true,url:"https://littleelmshoppe.com"},
     {id:12,title:"Kid Motion — Movement Class",loc:"Kid Motion Winnetka",addr:"75 Green Bay Rd, Glencoe",town:"Winnetka",time:"9:30 AM",end:"10:15 AM",cat:"sports",age:"0-2",src:"localBiz",desc:"Movement for ages 2–5 since 1985! Circle time with the Magic Can. Max 12 kids.",spots:3,free:false,cost:"$28/class",indoor:true,tags:["Since 1985","Max 12 kids"],url:"https://www.kidmotionwinnetka.com"},
@@ -129,6 +132,7 @@ const BASE_RECURRING={
     {id:29,title:"Family Swim Night",loc:"Deerfield Aquatic Center",town:"Deerfield",time:"6:00 PM",end:"8:00 PM",cat:"sports",age:"Family",src:"parkDistrict",desc:"Open swim with water toys, lazy river, splash pad.",free:false,cost:"$8/person",indoor:true,tags:["Drop-in"],url:"https://www.deerfieldparks.org"},
   ],
   Thu:[
+    {id:107,title:"Charlie and the Chocolate Factory",loc:"Marriott Theatre",addr:"10 Marriott Dr",town:"Lincolnshire",time:"10:00 AM",end:"11:10 AM",cat:"theater",age:"Family",src:"theater",desc:"Theatre for Young Audiences presents Roald Dahl's classic! 70-min musical in-the-round. Through Mar 28.",free:false,cost:"From $20",indoor:true,tags:["Through Mar 28","70 min"],url:"https://www.marriotttheatre.com/show/charlie-and-the-chocolate-factory",featured:true},
     {id:101,title:"Gym Jam",loc:"Takiff Center",addr:"999 Green Bay Rd",town:"Glencoe",time:"10:00 AM",end:"11:00 AM",cat:"sports",age:"0-2",src:"parkDistrict",free:true,indoor:true,tags:["Members free"],desc:"Open play ages 0–5.",url:"https://www.glencoeparkdistrict.com"},
     {id:102,title:"Chess Club",loc:"Lake Forest Library",town:"Lake Forest",time:"3:45 PM",end:"4:45 PM",cat:"stem",age:"9-12",src:"library",free:true,indoor:true,tags:["All levels","Snacks"],desc:"Weekly chess. Sets and snacks provided.",url:"https://www.lakeforestlibrary.org"},
     {id:103,title:"Frozen Jr — Rehearsal",loc:"Community House Winnetka",town:"Winnetka",time:"4:00 PM",end:"6:00 PM",cat:"theater",age:"6-8",src:"theater",desc:"Skyline Children's Theater musical rehearsals.",free:false,cost:"$425/session",indoor:true,tags:["Named roles"],url:"https://www.mycommunityhouse.org"},
@@ -137,6 +141,7 @@ const BASE_RECURRING={
     {id:106,title:"Wiggle Time",loc:"Rec Center HP",town:"Highland Park",time:"10:30 AM",end:"12:30 PM",cat:"sports",age:"0-2",src:"parkDistrict",free:false,cost:"$8–$10",indoor:true,tags:["Drop-in"],desc:"Open play ages 0–5.",url:"https://www.pdhp.org"},
   ],
   Fri:[
+    {id:206,title:"Charlie and the Chocolate Factory",loc:"Marriott Theatre",addr:"10 Marriott Dr",town:"Lincolnshire",time:"10:00 AM",end:"11:10 AM",cat:"theater",age:"Family",src:"theater",desc:"Theatre for Young Audiences presents Roald Dahl's classic! 70-min musical in-the-round. Through Mar 28.",free:false,cost:"From $20",indoor:true,tags:["Through Mar 28","70 min"],url:"https://www.marriotttheatre.com/show/charlie-and-the-chocolate-factory",featured:true},
     {id:201,title:"Family Movie Matinee",loc:"Skokie Library",town:"Skokie",time:"2:00 PM",end:"4:00 PM",cat:"social",age:"Family",src:"library",free:true,indoor:true,tags:["Free popcorn"],desc:"Big-screen film with popcorn and juice boxes!",url:"https://www.skokielibrary.info"},
     {id:202,title:"Learn to Ice Skate",loc:"Centennial Rink",town:"Highland Park",time:"4:00 PM",end:"5:00 PM",cat:"sports",age:"6-8",src:"parkDistrict",free:false,cost:"$14",indoor:true,tags:["Skate rental incl"],desc:"30-min lesson + 30-min free skate.",url:"https://www.pdhp.org"},
     {id:203,title:"Rock Performance Night",loc:"School of Rock",town:"Highwood",time:"7:00 PM",end:"9:00 PM",cat:"music",age:"9-12",src:"enrichment",free:true,indoor:true,tags:["Live show"],desc:"Students perform live! Free, open to all.",url:"https://www.schoolofrock.com/locations/highwood"},
@@ -144,6 +149,8 @@ const BASE_RECURRING={
     {id:205,title:"Kid Motion",loc:"Kid Motion Winnetka",town:"Winnetka",time:"9:30 AM",end:"10:15 AM",cat:"sports",age:"0-2",src:"localBiz",spots:3,free:false,cost:"$28",indoor:true,tags:["Max 12"],desc:"Movement class. Circle time with Magic Can!",url:"https://www.kidmotionwinnetka.com"},
   ],
   Sat:[
+    {id:309,title:"Charlie and the Chocolate Factory",loc:"Marriott Theatre",addr:"10 Marriott Dr",town:"Lincolnshire",time:"10:00 AM",end:"11:10 AM",cat:"theater",age:"Family",src:"theater",desc:"Theatre for Young Audiences presents Roald Dahl's classic! 70-min musical in-the-round. Under 2 free on lap. Through Mar 28.",free:false,cost:"From $20",indoor:true,tags:["Through Mar 28","70 min"],url:"https://www.marriotttheatre.com/show/charlie-and-the-chocolate-factory",featured:true},
+    {id:311,title:"Taste Buds Kitchen — Family Class",loc:"Taste Buds Kitchen",addr:"2521 Waukegan Rd",town:"Bannockburn",time:"10:00 AM",end:"12:00 PM",cat:"cooking",age:"Family",src:"localBiz",desc:"Cook a multi-course meal together in a nut-free kitchen! Kids and adults cook side by side. Different menu each week. Caregiver & Me (ages 2-8) also available.",free:false,cost:"$75/person",indoor:true,tags:["Nut-free","Family cooking"],url:"https://tastebudskitchen.com/bannockburn/",featured:true},
     {id:301,title:"Saturday Storytime",loc:"The Book Stall",addr:"811 Elm St, Winnetka",town:"Winnetka",time:"10:30 AM",end:"11:15 AM",cat:"reading",age:"3-5",src:"localBiz",free:true,indoor:true,tags:["Guest author","Free"],desc:"Guest author reads a new picture book. Craft and signing.",featured:true,url:"https://www.thebookstall.com"},
     {id:302,title:"Maple Syrup Hike",loc:"Chicago Botanic Garden",town:"Glencoe",time:"10:00 AM",end:"12:00 PM",cat:"outdoors",age:"Family",src:"museum",free:false,cost:"$18/family",indoor:false,tags:["Take-home syrup"],desc:"Tap trees, collect sap, live boiling demo!",featured:true,url:"https://www.chicagobotanic.org"},
     {id:303,title:"Writers Theatre Camp",loc:"Writers Theatre",addr:"325 Tudor Ct",town:"Glencoe",time:"9:00 AM",end:"3:00 PM",cat:"theater",age:"6-8",src:"theater",free:false,cost:"$90/day",indoor:true,tags:["Full day","Showcase"],desc:"Acting, improv, scene work. 2:30 PM mini showcase.",url:"https://www.writerstheatre.org"},
@@ -155,6 +162,7 @@ const BASE_RECURRING={
     {id:310,title:"Tween Watercolor",loc:"Evanston Art Center",town:"Evanston",time:"1:00 PM",end:"3:00 PM",cat:"arts",age:"9-12",src:"studio",free:false,cost:"$25",indoor:true,tags:["Professional materials"],desc:"Wet-on-wet, dry brush, salt textures.",url:"https://www.evanstonartcenter.org"},
   ],
   Sun:[
+    {id:407,title:"Taste Buds Kitchen — Family Class",loc:"Taste Buds Kitchen",addr:"2521 Waukegan Rd",town:"Bannockburn",time:"10:00 AM",end:"12:00 PM",cat:"cooking",age:"Family",src:"localBiz",desc:"Cook a multi-course meal together in a nut-free kitchen! Different menu each week. Caregiver & Me (ages 2-8) also available.",free:false,cost:"$75/person",indoor:true,tags:["Nut-free","Family cooking"],url:"https://tastebudskitchen.com/bannockburn/"},
     {id:401,title:"Family Yoga",loc:"Gillson Park",town:"Wilmette",time:"9:00 AM",end:"10:00 AM",cat:"sports",age:"Family",src:"parkDistrict",free:true,indoor:false,tags:["Bring a mat"],desc:"Gentle yoga for all ages. Hot tea and fruit after.",url:"https://wilmettepark.org"},
     {id:402,title:"Volcano Lab",loc:"Kohl Children's Museum",addr:"2100 Patriot Blvd",town:"Glenview",time:"11:00 AM",end:"12:30 PM",cat:"stem",age:"3-5",src:"museum",free:false,cost:"$16/child",indoor:true,tags:["Museum incl","Messy fun!"],desc:"Baking soda volcanoes with lab coats and goggles!",featured:true,url:"https://www.kohlchildrensmuseum.org"},
     {id:403,title:"Family Hip-Hop",loc:"Soul2Sole Dance",town:"Highland Park",time:"3:00 PM",end:"4:00 PM",cat:"dance",age:"Family",src:"studio",free:false,cost:"$20/family",indoor:true,tags:["No experience"],desc:"Parents and kids learn hip-hop together!",url:"https://soul2soledance.com"},
@@ -577,6 +585,7 @@ function App(){
   const [showF,setShowF]=useState(false);
   const [showT,setShowT]=useState(false);
   const [search,setSearch]=useState("");
+  const [sortBy,setSortBy]=useState("default"); // "default" | "time" | "free"
 
   // Live data hook
   const {getEvents,loadingState,lastUpdated,liveCount,refreshData}=useEventData();
@@ -587,6 +596,7 @@ function App(){
   const dayObj=DAYS.find(d=>d.key===selDay)||DAYS[2];
   const dayEvts=getEvents(dayObj);
 
+  const parseTime=t=>{if(!t||t==="TBD")return 9999;const m=t.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return 9999;let h=parseInt(m[1]);const mn=parseInt(m[2]);const pm=m[3].toUpperCase()==="PM";if(pm&&h!==12)h+=12;if(!pm&&h===12)h=0;return h*60+mn};
   const filt=arr=>arr.filter(e=>{
     if(cat!=="all"&&e.cat!==cat)return false;
     if(town!=="All Towns"&&e.town!==town)return false;
@@ -594,7 +604,8 @@ function App(){
     if(search){const q=search.toLowerCase();if(!e.title.toLowerCase().includes(q)&&!e.loc.toLowerCase().includes(q)&&!(e.desc||"").toLowerCase().includes(q))return false}
     return true;
   });
-  const filtered=filt(dayEvts);
+  const sortEvents=arr=>{if(sortBy==="time")return[...arr].sort((a,b)=>parseTime(a.time)-parseTime(b.time));if(sortBy==="free")return[...arr].sort((a,b)=>(b.free?1:0)-(a.free?1:0)||(parseTime(a.time)-parseTime(b.time)));return arr};
+  const filtered=sortEvents(filt(dayEvts));
   const allEvts=DAYS.flatMap(d=>getEvents(d));
   const sl=allEvts.filter(e=>saved.has(e.id));
   const af=[cat!=="all",town!=="All Towns",age!=="All Ages"].filter(Boolean).length;
@@ -626,8 +637,9 @@ function App(){
         </div>
         <button onClick={goNext} disabled={ci===DAYS.length-1} style={{width:38,height:38,borderRadius:12,border:`1.5px solid ${ci===DAYS.length-1?P.warmDark:P.burgundy}`,background:P.white,cursor:ci===DAYS.length-1?"default":"pointer",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,color:ci===DAYS.length-1?P.warmDark:P.burgundy,opacity:ci===DAYS.length-1?.4:1,WebkitAppearance:"none"}}>›</button>
       </div>
-      <div style={{display:"flex",gap:8,padding:"4px 20px 8px",overflowX:"auto"}}>
+      <div style={{display:"flex",gap:8,padding:"4px 20px 8px",overflowX:"auto",alignItems:"center"}}>
         {[{n:filtered.filter(e=>e.free).length,l:"Free",c:P.sage,b:P.sagePale},{n:filtered.filter(e=>e.src==="localBiz").length,l:"Local Biz",c:P.burgundy,b:P.burgBg},{n:filtered.filter(e=>e.featured).length,l:"Featured",c:P.lavender,b:P.lavPale},{n:liveCt,l:"Live",c:P.teal,b:P.tealBg}].map((x,i)=>x.n>0?<div key={i} style={{padding:"6px 14px",borderRadius:20,background:x.b,display:"flex",alignItems:"center",gap:6,flexShrink:0}}><span style={{fontSize:16,fontWeight:800,color:x.c,fontFamily:"'Playfair Display',serif"}}>{x.n}</span><span style={{fontSize:11,fontWeight:600,color:x.c}}>{x.l}</span></div>:null)}
+        <div style={{marginLeft:"auto",flexShrink:0}}><button onClick={()=>setSortBy(s=>s==="default"?"time":s==="time"?"free":"default")} style={{padding:"6px 12px",borderRadius:20,border:`1.5px solid ${sortBy!=="default"?P.burgundy:P.warmDark}`,background:sortBy!=="default"?P.burgBg:P.white,cursor:"pointer",display:"flex",alignItems:"center",gap:4,WebkitAppearance:"none"}}><span style={{fontSize:11,fontWeight:600,color:sortBy!=="default"?P.burgundy:P.textLight}}>⏱ {sortBy==="time"?"By Time":sortBy==="free"?"Free First":"Sort"}</span></button></div>
       </div>
       <div style={{padding:"4px 20px 0"}}>{filtered.length===0?<div style={{textAlign:"center",padding:"40px 20px"}}><div style={{fontSize:40,marginBottom:12}}>🌸</div><p style={{fontSize:16,color:P.textLight}}>{dayEvts.length===0?"No events this day":"No matches for your filters"}</p>{af>0&&<button onClick={clr} style={{marginTop:8,padding:"8px 20px",borderRadius:20,border:"none",background:P.burgundy,color:"#FFF",fontWeight:600,fontSize:13,cursor:"pointer"}}>Clear Filters</button>}</div>:filtered.map(e=><Card key={e.id} e={e} saved={saved.has(e.id)} onSave={toggle} expanded={exp===e.id} onToggle={()=>setExp(exp===e.id?null:e.id)}/>)}</div>
     </div>,
